@@ -15,15 +15,6 @@ var con = mysql.createConnection({
     database: 'bakery'
 })
 
-//Just to make sure connection works with actual database
-/*con.connect(function(err) {
-    if (err) throw err;
-    con.query("SELECT * FROM product", function (err, result, fields) {
-      if (err) throw err;
-      console.log(result);
-    });
-  });*/
-
 //Allows use of ejs
 app.set('view engine', 'ejs')
 
@@ -58,25 +49,27 @@ app.get("/confirmationindex", (req, res) =>{
     res.render('confirmationindex')
 })
 
-//Commented out atm because of get function
-/*app.get("/checkoutindex", (req, res) =>{
+app.get("/checkoutindex", (req, res) =>{
     res.render('checkoutindex')
-})*/
+})
 
+
+app.post("/orderindex", function(req, res){
+    res.redirect('/checkoutindex')
+})
 
 //Inserts new review into database
-app.post("/", function(req, res){
-    var customerID = req.body.custFName;
-    var custLName = req.body.custLName;
+app.post("/review", function(req, res){
+    var orderID = req.body.orderNumber;
     var reviewRate = req.body.reviewRate;
     var review = req.body.review;
 
-    //Atm you have to force enter a customerID due to lack of database functionality on this part
-    console.log(customerID, custLName, reviewRate, review);
+    
+    console.log(orderID, reviewRate, review);
 
-    var sql = 'INSERT INTO review (customerID, reviewRating, reviewDesc) VALUES (?, ?, ?)';
+    var sql = 'INSERT INTO review (orderID, reviewRating, reviewDesc) VALUES (?, ?, ?)';
 
-    con.query(sql, [customerID, reviewRate, review], function(err, result){
+    con.query(sql, [orderID, reviewRate, review], function(err, result){
         if(err){
             throw err
         } 
@@ -103,11 +96,17 @@ app.get("/review", function(req, res){
 
 
 //Would insert into order_placed in database
-//Don't know how variables would work
-/*app.post("/", function(req, res){
-    
+app.post("/orderindex", function(req, res){
+    var item1 = req.body.item1;
+    var item1Qty = req.body.item1Qty
+    var item2 = req.body.item2;
+    var item2Qty = req.body.item2Qty;
+    var item3 = req.body.item3;
+    var item3Qty = req.body.item3Qty;
 
-    console.log();
+
+
+    console.log(item1, item1Qty, item2, item2Qty, item3, item3Qty);
 
     var sql = 'INSERT INTO order_placed () VALUES (?, ?, ?)';
 
@@ -117,16 +116,16 @@ app.get("/review", function(req, res){
         } 
         else{
         console.log("Data uploaded");
-        res.redirect('/checkoutindex');
+        res.redirect('/confirmationindex');
         }
     });
-});*/
+});
 
 
 
 //Insert customer into database
 //Should work once database has proper functions
-/*app.post("/", function(req, res){
+app.post("/checkoutindex", function(req, res){
     var  firstName = req.body.firstname;
     var lastName = req.body.lastname;
     var streetAddress = req.body.street;
@@ -146,23 +145,12 @@ app.get("/review", function(req, res){
         } 
         else{
         console.log("Data uploaded");
-        res.redirect('/confirmationindex');
+        res.redirect('/orderindex');
         }
     });
-}); */
+}); 
 
-//This will grab the total, quantity, and items ordered from database for an order
-/*app.get("/checkoutindex", function(req, res){
-    var sql = 'SELECT * from ';
-    con.query(sql, function(err, results){
-        if (err){
-            throw err
-        }
-        else{
-            res.render("checkoutindex", { order_details : results })
-        }
-    })
-})*/
+
 
 
 

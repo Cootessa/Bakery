@@ -27,292 +27,128 @@
     <h1><b>Place an Order!</b></h1>
 
     <hr>
-    <form action="/" method="post">
+    <form action="/orderindex" method="post">
       <b>
         <legend>What Would You Like Today?</legend>
         <label for="items">Items Available:</label>
         <section class="selection">
-          <label for="croissant">Croissants:</label>
-          <br>
-          <input type="checkbox" name="croissant" id="butterCrois" value="butterCrois" data-price="3.00">
-          <label for="butterCrois">Classic Butter Croissant</label>
-          <select name="butterCrois" id="butterCroisQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="croissant" id="cocoCrois" value="cocoCrois" data-price="3.50">
-          <label for="cocoCrois">Chocolate Croissant</label>
-          <select name="cocoCrois" id="cocoCroisQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="croissant" id="almCrois" value="almCrois" data-price="3.50">
-          <label for="almCrois">Almond Croissant</label>
-          <select name="almCrois" id="almCroisQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <br>
-          <label for="danish">Danishes:</label>
-          <br>
-          <input type="checkbox" name="danish" id="fruitDan" value="fruitDan" data-price="3.00">
-          <label for="fruitDan">Fruit Danish</label>
-          <select name="fruitDan" id="fruitDanQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="danish" id="cheeseDan" value="cheeseDan" data-price="2.50">
-          <label for="cheeseDan">Cheese Danish</label>
-          <select name="cheeseDan" id="cheeseDanQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="danish" id="cinnaDan" value="cinnaDan" data-price="2.00">
-          <label for="cinnaDan">Cinnamon Danish</label>
-          <select name="cinnaDan" id="cinnaDanQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <br>
-          <label for="muffins">Muffins:</label>
-          <br>
-          <input type="checkbox" name="muffin" id="blueMuff" value="blueMuff" data-price="2.00">
-          <label for="blueMuff">Blueberry Muffin</label>
-          <select name="blueMuff" id="blueMuffQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="muffin" id="cocoMuff" value="cocoMuff" data-price="3.00">
-          <label for="cocoMuff">Chocolate Chip Muffin</label>
-          <select name="cocoMuff" id="cocoMuffQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="muffin" id="nanaMuff" value="nanaMuff" data-price="3.00">
-          <label for="nanaMuff">Banana Nut Muffin</label>
-          <select name="nanaMuff" id="nanaMuffQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <br>
-          <label for="scone">Scones:</label>
-          <br>
-          <input type="checkbox" name="scone" id="blueScone" value="blueScone" data-price="3.50">
-          <label for="blueScone">Blueberry Scone</label>
-          <select name="blueScone" id="blueSconeQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="scone" id="cocoScone" value="cocoScone" data-price="4.00">
-          <label for="cocoScone">Chocolate Chip Scone</label>
-          <select name="cocoScone" id="cocoSconeQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="scone" id="lemonScone" value="lemonScone" data-price="3.50">
-          <label for="lemonScone">Lemon Poppyseed Scone</label>
-          <select name="lemonScone" id="lemonSconeQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <br>
-          <label for="pietart">Pies and Tarts:</label>
-          <br>
-          <input type="checkbox" name="pietart" id="applePie" value="applePie" data-price="4.00">
-          <label for="applePie">Apple Pie</label>
-          <select name="applePie" id="applePieQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="pietart" id="cherryPie" value="cherryPie" data-price="4.00">
-          <label for="cherryPie">Cherry Pie</label>
-          <select name="cherryPie" id="cherryPieQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="pietart" id="bluePie" value="bluePie" data-price="3.50">
-          <label for="bluePie">Blueberry Pie</label>
-          <select name="bluePie" id="bluePieQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="pietart" id="lemonTart" value="lemonTart" data-price="3.50">
-          <label for="lemonTart">Lemon Tart</label>
-          <select name="lemonTart" id="lemonTartQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="pietart" id="cocoTart" value="cocoTart" data-price="4.00">
-          <label for="cocoTart">Chocolate Tart</label>
-          <select name="cocoTart" id="cocoTartQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="pietart" id="fruitTart" value="fruitTart" data-price="4.50">
-          <label for="fruitTart">Fruit Tart</label>
-          <select name="fruitTart" id="fruitTartQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <br>
-          <label for="cake">Cakes:</label>
-          <br>
-          <input type="checkbox" name="cake" id="cocoCake" value="cocoCake" data-price="3.50">
-          <label for="cocoCake">Chocolate Cake</label>
-          <select name="cocoCake" id="cocoCakeQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="cake" id="nillaCake" value="nillaCake" data-price="3.50">
-          <label for="nillaCake">Vanilla Cake</label>
-          <select name="nillaCake" id="nillaCakeQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="cake" id="redCake" value="redCake" data-price="3.00">
-          <label for="redCake">Red Velvet Cake</label>
-          <select name="redCake" id="redCakeQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="cake" id="carrotCake" value="carrotCake" data-price="3.00">
-          <label for="carrotCake">Carrot Cake</label>
-          <select name="carrotCake" id="carrotCakeQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <br>
-          <label for="cookie">Cookies:</label>
-          <br>
-          <input type="checkbox" name="cookie" id="cocoCookie" value="cocoCookie" data-price="1.50">
-          <label for="cocoCookie">Chocolate Chip Cookie</label>
-          <select name="cocoCookie" id="cocoCookieQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="cookie" id="oatmealCookie" value="oatmealCookie" data-price="1.50">
-          <label for="oatmealCookie">Oatmeal Raisin Cookie</label>
-          <select name="oatmealCookie" id="oatmealCookieQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="cookie" id="peanutCookie" value="peanutCookie" data-price="1.50">
-          <label for="peanutCookie">Peanut Butter Cookie</label>
-          <select name="peanutCookie" id="peanutCookieQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <input type="checkbox" name="cookie" id="sugarCookie" value="sugarCookie" data-price="1.50">
-          <label for="sugarCookie">Sugar Cookie</label>
-          <select name="sugarCookie" id="sugarCookieQty">
-            <option value="0">-</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-        <b></section>
+          <label for="item1">First Selection:</label><br>
+<select id="item1" name="item1" required>
+  <option value="" disabled selected>Select Item</option>
+  <option value="236">Classic Butter Croissant</option>
+  <option value="237">Chocolate Croissant</option>
+  <option value="238">Almond Croissant</option>
+  <option value="450">Blueberry Muffin</option>
+  <option value="451">Chocolate Chip Muffin</option>
+  <option value="452">Banana Nut Muffin</option>
+  <option value="123">Blueberry Scone</option>
+  <option value="124">Chocolate Chip Scone</option>
+  <option value="125">Lemon Poppyseed Scone</option>
+  <option value="258">Apple Pie</option>
+  <option value="259">Cherry Pie</option>
+  <option value="260">Blueberry Pie</option>
+  <option value="280">Lemon Tar</option>
+  <option value="281">Chocolate Tart</option>
+  <option value="282">Fruit Tart</option>
+  <option value="345">Chocolate Cake</option>
+  <option value="346">Vanilla Cake</option>
+  <option value="347">Red Velvet Cake</option>
+  <option value="348">Carrot Cake</option>
+  <option value="40">Chocolate Chip Cookie</option>
+  <option value="41">Oatmeal Raisin Cookie</option>
+  <option value="42">Peanut Butter Cookie</option>
+  <option value="43">Sugar Cookie</option>
+  <option value="170">Fruit Danish</option>
+  <option value="171">Cheese Danish</option>
+  <option value="172">Cinnamon Danish</option>
+</select><br>
+<select name="item1Qty" id="item1Qty">
+  <option value="0">-</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+
+
+<label for="item1">Second Selection:</label><br>
+<select id="item2" name="item2">
+  <option value="" disabled selected>Select Item</option>
+  <option value="236">Classic Butter Croissant</option>
+  <option value="237">Chocolate Croissant</option>
+  <option value="238">Almond Croissant</option>
+  <option value="450">Blueberry Muffin</option>
+  <option value="451">Chocolate Chip Muffin</option>
+  <option value="452">Banana Nut Muffin</option>
+  <option value="123">Blueberry Scone</option>
+  <option value="124">Chocolate Chip Scone</option>
+  <option value="125">Lemon Poppyseed Scone</option>
+  <option value="258">Apple Pie</option>
+  <option value="259">Cherry Pie</option>
+  <option value="260">Blueberry Pie</option>
+  <option value="280">Lemon Tar</option>
+  <option value="281">Chocolate Tart</option>
+  <option value="282">Fruit Tart</option>
+  <option value="345">Chocolate Cake</option>
+  <option value="346">Vanilla Cake</option>
+  <option value="347">Red Velvet Cake</option>
+  <option value="348">Carrot Cake</option>
+  <option value="40">Chocolate Chip Cookie</option>
+  <option value="41">Oatmeal Raisin Cookie</option>
+  <option value="42">Peanut Butter Cookie</option>
+  <option value="43">Sugar Cookie</option>
+  <option value="170">Fruit Danish</option>
+  <option value="171">Cheese Danish</option>
+  <option value="172">Cinnamon Danish</option>
+</select><br>
+<select name="item2Qty" id="item2Qty">
+  <option value="0">-</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+
+<label for="item3">Third Selection:</label><br>
+<select id="item3" name="item3">
+  <option value="" disabled selected>Select Item</option>
+  <option value="236">Classic Butter Croissant</option>
+  <option value="237">Chocolate Croissant</option>
+  <option value="238">Almond Croissant</option>
+  <option value="450">Blueberry Muffin</option>
+  <option value="451">Chocolate Chip Muffin</option>
+  <option value="452">Banana Nut Muffin</option>
+  <option value="123">Blueberry Scone</option>
+  <option value="124">Chocolate Chip Scone</option>
+  <option value="125">Lemon Poppyseed Scone</option>
+  <option value="258">Apple Pie</option>
+  <option value="259">Cherry Pie</option>
+  <option value="260">Blueberry Pie</option>
+  <option value="280">Lemon Tar</option>
+  <option value="281">Chocolate Tart</option>
+  <option value="282">Fruit Tart</option>
+  <option value="345">Chocolate Cake</option>
+  <option value="346">Vanilla Cake</option>
+  <option value="347">Red Velvet Cake</option>
+  <option value="348">Carrot Cake</option>
+  <option value="40">Chocolate Chip Cookie</option>
+  <option value="41">Oatmeal Raisin Cookie</option>
+  <option value="42">Peanut Butter Cookie</option>
+  <option value="43">Sugar Cookie</option>
+  <option value="170">Fruit Danish</option>
+  <option value="171">Cheese Danish</option>
+  <option value="172">Cinnamon Danish</option>
+</select><br>
+<select name="item3Qty" id="item3Qty">
+  <option value="0">-</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
     
       <button id="checkout-button">Submit</button>
          

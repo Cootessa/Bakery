@@ -7,13 +7,11 @@
   <body>
     <h1>Let us know how we're doing!</h1>
 
-    <form action="/" method="post">
+    <form action="/review" method="post">
       <fieldset>
         <legend>Write a Review</legend>
-        <label for="custFName">First Name:</label><br>
-        <input type="text" id="custFName" name="custFName"><br>
-        <label for="custLName">Last Name:</label><br>
-        <input type="text" id="custLName" name="custLName"><br>
+        <label for="orderNumber">Order Number:</label><br>
+        <input type="text" id="orderNumber" name="orderNumber"><br>
         <label for="reviewRate">Rating:</label>
         <input type="number" id="reviewRate" name="reviewRate"><br><br>
         <label for="review">Tell us about your experience:</label><br>
@@ -27,10 +25,10 @@
 
     <table>
 
-      <tr><th>Name:</th>
+      <tr><th>Name</th>
         <th></th>
-      <th>Rating:</th>
-      <th>Review:</th></tr>
+      <th>Review</th>
+      <th>Rating</th></tr>
 
       <% if(customer_reviews.length > 0){  %>
       <% for (var i=0; i<customer_reviews.length; i++){ %>
